@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import ProductList from '../components/ProductList';
 import Hero from '../components/Hero';
 import CategorySection from '../components/CategorySection';
-import HeroSection from '../components/HeroSection';
-import Cart from '../components/Cart';
-import { CartProvider } from '../context/CartContext';
 
 
 const Home = () => {
@@ -28,7 +24,7 @@ const Home = () => {
     <div className="card-container">  
         <Hero />
         <CategorySection />
-        <HeroSection/>
+        {/* <HeroSection/> */}
         
     {/* <CartProvider>
     <div>

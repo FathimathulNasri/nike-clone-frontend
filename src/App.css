@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -36,3 +36,56 @@
     transform: rotate(360deg);
   }
 }
+
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.product-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.product-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  padding: 10px;
+  background-color: #111;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f4b400;
+}
+
+.cart {
+  margin-top: 40px;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+ */
+ 

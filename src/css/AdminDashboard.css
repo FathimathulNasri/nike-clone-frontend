@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 600px;
+
+
+}
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 100px;
+  }
+  .dashboard {
+    padding: 20px;
+  }

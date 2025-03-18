@@ -1,0 +1,12 @@
+.cart-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-btn {
+    width: fit-content;
+    height: fit-content;
+    background-color: red;
+}

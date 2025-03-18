@@ -1,0 +1,74 @@
+/* frontend/src/components/ProductDetail.css */
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #f5f5f5;
+    /* height: 100vh; */
+  }
+  
+  .product-info {
+    text-align: center;
+    margin: 0px;
+  }
+  
+  /* Product name */
+  .product-info h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
+  /* Product description */
+  .product-info p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 2px 0;
+    max-width:700px ;
+  }
+  
+  /* Price */
+  .product-info span {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #e53935; /* Nike Red Color */
+    margin-top: 4px;
+    display: block;
+  }
+   .product-info img {
+    width: 1000px;
+    height: 300px;
+    object-fit: contain;
+    margin-bottom: 20px;
+  }
+  
+  .product-info h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .product-info p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .product-info .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e53935;
+    margin-bottom: 20px;
+  }
+  
+  .product-info .category,
+  .product-detail  {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 10px;
+  }
+   

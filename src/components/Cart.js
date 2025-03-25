@@ -16,7 +16,7 @@ const Cart = () => {
       <ul>
         {cart?.map((item) => (
           <li key={item._id} className='cart-list'>
-            <img src={item.image} width="100px" height="100px"/>
+            <img src={item.image} alt="img" width="100px" height="100px"/>
             <p>{item.name} - ${item.price}</p>
             <button onClick={() => removeFromCart(item._id)} className='cart-btn'>Remove</button>
           </li>

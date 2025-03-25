@@ -26,7 +26,7 @@ const EditProduct = () => {
           .catch(error => {
             console.error('Error fetching product:', error);
           });
-      }, []);
+      }, [id]);
 
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);

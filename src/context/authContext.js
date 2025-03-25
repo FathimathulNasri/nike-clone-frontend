@@ -5,6 +5,7 @@ const AuthContext = createContext()
 
 export function AuthProvider({children}) {
    const [isLoggedIn, setIsLoggedIn] = useState(false)
+   const [isAdmin, setIsAdmin] = useState(false)
    
    useEffect(() =>{
     getUser()
@@ -12,7 +13,7 @@ export function AuthProvider({children}) {
 
    const getUser =async()=>{
     const token = localStorage.getItem('token')
-    const response = await axios.get('http://localhost:5000/api/auth/getUser',
+    const response = await axios.get('https://nike-clone-backend-nahc.onrender.com/api/auth/getUser',
         {
             headers: {
                 Authorization: `Bearer ${token}`, // Include the token in the Authorization header
@@ -23,10 +24,13 @@ export function AuthProvider({children}) {
         setIsLoggedIn(true)
         console.log('usd',isLoggedIn)
     }
+    else if(response.data.role === 'admin'){
+        setIsAdmin(true)
+    }
    }
 
     return (
-        <AuthContext.Provider value = {{isLoggedIn}}>
+        <AuthContext.Provider value = {{isLoggedIn, isAdmin}}>
             {children}
         </AuthContext.Provider>
     )

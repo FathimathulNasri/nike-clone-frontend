@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../pages/Header';
 import Sidebar from '../pages/Sidebar';
-import StatsCard from '../pages/StatsCard';
 import '../css/AdminDashboard.css';
 
 const AdminDashboard = () => {

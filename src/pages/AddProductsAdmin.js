@@ -2,8 +2,6 @@ import React from 'react';
 import Header from './Header';
 import Sidebar from './Sidebar';
 import AddProductForm from './AddProductForm';
-// import './AdminDashboard.css';
-// import '../css/Styles.css';
 
 
 const AddProductsAdmin = () => {

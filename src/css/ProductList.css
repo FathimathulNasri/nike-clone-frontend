@@ -1,36 +1,8 @@
-/* .product-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .product-item {
-    border: 1px solid #ddd;
-    padding: 10px;
-    width: 200px;
-  }
-  
-  .product-item img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .product-item h3 {
-    font-size: 18px;
-  }
-  
-  .product-item p {
-    font-size: 14px;
-  } */
-
-  /* frontend/src/components/ProductList.css */
 
 /* Basic styles for the product list container */
 .product-list {
     display: flex;
     flex-direction: row;
-    /* align-items: center; */
     padding: 10px;
     background-color: #f5f5f5;
   }
@@ -55,13 +27,14 @@
   
   /* Individual product card */
   .product-item {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.5s ease;
+    height: 800px;
   }
   
   .product-item:hover {
@@ -107,6 +80,7 @@
     color: #e53935; /* Nike Red Color */
     margin-top: 4px;
     display: block;
+    margin-bottom: 50px;
   }
   
   /* View Details Link */
@@ -114,12 +88,28 @@
     text-decoration: none;
     color: #1e88e5;
     font-size: 1rem;
-    margin-top: 35px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     display: inline-block;
   }
   
   .product-info a:hover {
     text-decoration: underline;
   }
-  
+  .View-button{
+    background-color: rgb(112, 111, 111);
+    width: 166px;
+    height: 40px;
+    padding: 0;
+    margin-bottom:10px ;
+  }
+  .Edit-button{
+    background-color: green;
+    width: 166px;
+    height: 40px;
+    padding: 0;
+    margin-bottom:10px ;
+  }
+  .Delete-button{
+    background-color: red;
+
+  }

@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = 'http://localhost:5000';
+const API_URL = 'https://nike-clone-backend-nahc.onrender.com';
 const token = localStorage.getItem('token')
 
 export const addtoCartService = async(productId)=>{

@@ -14,7 +14,7 @@ const Cart = () => {
     <div className="cart">
       <h2>Your Cart</h2>
       <ul>
-        {cart.map((item) => (
+        {cart?.map((item) => (
           <li key={item._id} className='cart-list'>
             <img src={item.image} width="100px" height="100px"/>
             <p>{item.name} - ${item.price}</p>

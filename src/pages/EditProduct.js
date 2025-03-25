@@ -1,9 +1,11 @@
 // frontend/src/components/AddProductForm.js
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../css/AddProductForm.css'
+import { useParams } from 'react-router-dom';
 
-const AddProductForm = () => {
+const EditProduct = () => {
+    const {id} = useParams()
     const [productData, setProductData] = useState({
         name: '',
         price: '',
@@ -14,6 +16,17 @@ const AddProductForm = () => {
         sizes: [],
         offer: '',
     });
+
+    useEffect(() => {
+        axios.get(`http://localhost:5000/api/products/${id}`)
+    
+          .then(response => {
+            setProductData(response.data.product);
+          })
+          .catch(error => {
+            console.error('Error fetching product:', error);
+          });
+      }, []);
 
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
@@ -62,7 +75,7 @@ const AddProductForm = () => {
 
         try {
             // Post product data to the backend with the admin token
-            const response = await axios.post('http://localhost:5000/api/products',
+            const response = await axios.put(`http://localhost:5000/api/products/edit/${id}`,
                 productData,
                 {
                     headers: {
@@ -224,11 +237,11 @@ const AddProductForm = () => {
                 </div>
 
                 <button type="submit" disabled={loading}>
-                    {loading ? 'Adding Product...' : 'Add Product'}
+                    Edit
                 </button>
             </form>
         </div>
     );
 };
 
-export default AddProductForm;
+export default EditProduct;

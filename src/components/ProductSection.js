@@ -1,6 +1,6 @@
 // src/components/ProductSection.js
 import React from 'react';
-import './ProductSection.css';
+import '../css/ProductSection.css';
 import running from '../assets/running.jpeg'
 
 const ProductSection = () => {

@@ -18,7 +18,7 @@ function Signup() {
       setError('All fields are required');
       return;
     }
-    axios.post('http://localhost:5000/api/auth/register',{username, email, password, role})
+    axios.post('https://nike-clone-backend-nahc.onrender.com/api/auth/register',{username, email, password, role})
     .then(res => {
       alert(res.data.message);
       navigate('/login')

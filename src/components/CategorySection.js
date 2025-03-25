@@ -16,7 +16,7 @@ const CategorySection = () => {
             <h3>Shop by Shoes</h3>
             <div className="category-list">
                 { categories.map((category) => 
-                    <div className="category-item" id={category}>
+                    <div key={category} className="category-item" id={category}>
                         <Link to={`/category/${category}`}>
                             <button className="shop-item">{category}</button>
                         </Link>
@@ -29,7 +29,7 @@ const CategorySection = () => {
         <h3>Shop by Accessories</h3>
             <div className="category-list">
                 { accessories.map((accessory) => 
-                    <div className="category-item" id={accessory}>
+                    <div key={accessory} className="category-item" id={accessory}>
                         <Link to={`/category/${accessory}`}>
                             <button className="shop-item">{accessory}</button>
                         </Link>
@@ -42,7 +42,7 @@ const CategorySection = () => {
         <h3>Shop by Clothes</h3>
             <div className="category-list">
                 { clothes.map((cloth) => 
-                    <div className="category-item" id={cloth}>
+                    <div key={cloth} className="category-item" id={cloth}>
                         <Link to={`/category/${cloth}`}>
                             <button className="shop-item">{cloth}</button>
                         </Link>

@@ -2,10 +2,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import {deleteProduct} from '../services/productService'
 import '../css/ProductList.css'
+import {useAuth} from '../context/authContext'
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
+  const {isAdmin} = useAuth()
 
   useEffect(() => {
     axios.get('http://localhost:5000/api/products/')
@@ -16,6 +19,12 @@ const ProductList = () => {
         console.error('Error fetching products:', error);
       });
   }, []);
+
+const handleDelete =async(id)=>{
+  await deleteProduct(id)
+}
+
+
 
   return (
     <div className="product-list">
@@ -28,7 +37,15 @@ const ProductList = () => {
             <h3>{product.name}</h3>
             <p>{product.description}</p>
             <span>${product.price}</span>
-            <Link to={`/view-details/${product._id}`}>View Details</Link>
+            <Link to={`/view-details/${product._id}`}><button className="View-button">View Details</button></Link>
+            
+            {isAdmin && 
+              <>
+                <Link to={`/editProduct/${product._id}`}><button className="Edit-button">Edit</button></Link>
+                <button onClick={()=>handleDelete(product._id)} className="Delete-button">Delete</button>
+              </>
+            }
+            
           </div>
           </div>
         ))}

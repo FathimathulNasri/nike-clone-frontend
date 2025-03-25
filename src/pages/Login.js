@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-// import { Link } from 'react-router-dom';
+
 import '../css/Login.css'; // Importing the CSS for styling
 
 
@@ -10,11 +10,8 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
-  // const [setFormData] = useState({
-  //   username: "",
-  //   email: "",
-  //   password: "",
-  // });
+
+
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
@@ -30,7 +27,7 @@ const Login = () => {
     } else {
       setErrorMessage('');
     try {
-        await axios.post('http://localhost:5000/api/auth/login', { email, password}).then(response => {
+        await axios.post('https://nike-clone-backend-nahc.onrender.com/api/auth/login', { email, password}).then(response => {
         // Get the token and role from the response
         const { token, user } = response.data;
   
@@ -56,27 +53,7 @@ const Login = () => {
     //   const { token, role } = response.data;
   };
 
-      // .then(res => {
-      //   alert(res.data.message);
-      // })
-      // .catch(err => console.error(err));   
-      // // navigate('/blogUser')
-      // }
-    
-      // if (email === 'admin@gmail.com' && password === 'password123') {
-      //   // Successful validation, navigate to the home page
-      //   navigate('/blogAdmin');
-      // } 
-      // else {
-      //   // Show error if validation fails
-      //   setErrorMessage('Invalid username or password');
-      // }
-    // setFormData({
-    //   username: "",
-    //   email: "",
-    //   password: "",
-    // });
-    // setErrorMessage('');
+      
 
   };
 
@@ -105,8 +82,6 @@ const Login = () => {
           />
         </div>
         {errorMessage && <div className="error-message">{errorMessage}</div>}
-        {/* <button type="submit" className="login-btn"> Login</button> */}
-        {/* <Link to="/blogUser"> <button type="submit" className="login-btn">Login</button></Link> */}
         <button type="submit" className="login-btn">Login</button>
       </form>
     </div>

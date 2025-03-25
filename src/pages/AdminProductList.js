@@ -3,7 +3,6 @@ import Header from './Header';
 import Sidebar from './Sidebar';
 import ProductList from '../components/ProductList';
 import '../css/AdminDashboard.css';
-// import '../css/AdminProductList.css';
 
 
 const AdminProductList = () => {

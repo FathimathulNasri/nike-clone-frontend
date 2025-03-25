@@ -45,13 +45,6 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  #Basketball{
-    background-image: url('../assets/basketball1.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 500px;
-    height: 250px;
-  }
   #Jordan{
     background-image: url('../assets/jordan.jpg');
     background-repeat: no-repeat;
@@ -117,13 +110,6 @@
     width: 500px;
     height: 250px;
   }
-  
-  /* .category-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-  } */
   
   .category-item p {
     font-size: 18px;
